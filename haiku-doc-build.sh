@@ -1,6 +1,10 @@
 #! usr/bin/bash
 
-#This script will only work on:
+# Update (8/12/14): The Haiku maintainers have enabled the option to
+# generate docsets in the doxyfile, so no patching needed.
+# refering to commit: https://github.com/haiku/haiku/commit/f36b3f9b3e18f49b640064af67b31797d4a3612b
+
+# This script will only work on:
 # A Mac/Hackintosh with OS X
 # Xcode 3 or Higher
 # Doxygen
@@ -18,18 +22,19 @@
 # Clone the Haiku repository #
 git clone https://git.haiku-os.org/haiku
 
-# Change in to the current directory #
+# Change in to the haiku current directory #
 cd haiku/
 
 # Make a new folder inside the haiku folder
 mkdir generated/
 
+# Change in to the user current directory
 cd docs/user/
 
-# Patch Doxyfile
-
+# Build makefiles for documentation
 doxygen
 
+# Generate Docset
 cd ../../generated/doxygen/html/ && make
 
-# From here, the documentation is generated but it needs to be patched.
+echo "Docset generation complete!"
