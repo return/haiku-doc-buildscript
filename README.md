@@ -1,4 +1,4 @@
 haiku-doc-buildscript
 =====================
 
-Auto-generated build script for the Haiku API
+A very simple build script to automate docset generation for the Haiku API. (Haiku Book).
