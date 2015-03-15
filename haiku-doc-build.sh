@@ -37,4 +37,10 @@ doxygen
 # Generate Docset
 cd ../../generated/doxygen/html/ && make
 
+# Move docset from current directory to a folder
+
+# Edit docset keyword from 'doxygen' to 'haiku'
+
+# Zip up docset and remove .DS_Stores inside
+
 echo "Docset generation complete!"
