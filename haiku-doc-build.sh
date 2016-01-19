@@ -17,8 +17,6 @@
 
 
 # This will only work in OS X, (docsetutil)
-# if echo $OSTYPE != darwin;
-# echo Sorry, but this script only supports OS X
 # Clone the Haiku repository #
 git clone https://git.haiku-os.org/haiku
 
