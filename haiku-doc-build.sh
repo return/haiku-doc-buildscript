@@ -6,7 +6,7 @@
 
 # This script will only work on:
 # A Mac/Hackintosh with OS X
-# Xcode 3 or Higher
+# Xcode 3 or Higher (Due to docsetutil)
 # Doxygen
 # GNU Make / Commandline utils
 
@@ -16,8 +16,8 @@
 # git pull --rebase and rebuild the doc from there
 
 
-# This will only work in OS X, (docsetutil)
-# Clone the Haiku repository #
+# This will only work in OS X since it uses docsetutil to generate the docset.
+# Clone the Haiku repository
 git clone https://git.haiku-os.org/haiku
 
 # Change in to the haiku current directory #
