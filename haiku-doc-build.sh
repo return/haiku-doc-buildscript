@@ -18,9 +18,9 @@
 
 # This will only work in OS X since it uses docsetutil to generate the docset.
 # Clone the Haiku repository
-git clone https://git.haiku-os.org/haiku
+git clone https://github.com/haiku/haiku
 
-# Change in to the haiku current directory #
+# Change in to the haiku current directory
 cd haiku/
 
 # Make a new folder inside the haiku folder
