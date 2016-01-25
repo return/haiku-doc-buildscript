@@ -35,11 +35,13 @@ doxygen
 # Generate Docset
 cd ../../generated/doxygen/html/ && make
 
+# Notify user of docset generation completion
+echo "Docset generation complete!"
+
 # Move docset from current directory to a folder
 mv org.haiku.HaikuBook.docset $BUILD_DIR/Haiku_Book.docset
 
 # Edit docset keyword from 'doxygen' to 'haiku'
 
 # Zip up docset and remove .DS_Stores inside
-
-echo "Docset generation complete!"
+tar --exclude='.DS_Store' -cvzf Haiku_Book.tgz Haiku_Book.docset
