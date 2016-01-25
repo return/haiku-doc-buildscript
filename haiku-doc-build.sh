@@ -14,7 +14,7 @@
 # Also check if the repo is updated if the person has
 # already cloned the haiku repository
 # git pull --rebase and rebuild the doc from there
-
+BUILD_DIR=`pwd`
 
 # This will only work in OS X since it uses docsetutil to generate the docset.
 # Clone the Haiku repository
@@ -36,6 +36,7 @@ doxygen
 cd ../../generated/doxygen/html/ && make
 
 # Move docset from current directory to a folder
+mv org.haiku.HaikuBook.docset $BUILD_DIR/Haiku_Book.docset
 
 # Edit docset keyword from 'doxygen' to 'haiku'
 
