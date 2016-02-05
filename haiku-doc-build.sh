@@ -11,34 +11,35 @@
 # GNU Make / Commandline utils
 
 
-# Also check if the repo is updated if the person has
-# already cloned the haiku repository
+# Check if the repo is updated if the person has already cloned the haiku repository
 # git pull --rebase and rebuild the doc from there
+
+
 BUILD_DIR=`pwd`
 
 # This will only work in OS X since it uses docsetutil to generate the docset.
 # Clone the Haiku repository
 git clone https://github.com/haiku/haiku
 
-# Change in to the haiku current directory
+# Change in to the haiku current directory.
 cd haiku/
 
-# Make a new folder inside the haiku folder
+# Make a new folder inside the haiku folder.
 mkdir generated/
 
-# Change in to the user current directory
+# Change the current directory to the user current directory.
 cd docs/user/
 
-# Build makefiles for documentation
+# Build makefiles for documentation.
 doxygen
 
 # Generate Docset
 cd ../../generated/doxygen/html/ && make
 
-# Notify user of docset generation completion
+# Notify the user of docset generation completion,
 echo "Docset generation complete!"
 
-# Move docset from current directory to a folder
+# Move docset from current directory to the build directory.
 mv org.haiku.HaikuBook.docset $BUILD_DIR/Haiku_Book.docset
 
 # Edit docset keyword from 'doxygen' to 'haiku'
