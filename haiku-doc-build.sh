@@ -10,10 +10,8 @@
 # Doxygen
 # GNU Make / Commandline utils
 
-
 # Check if the repo is updated if the person has already cloned the haiku repository
 # git pull --rebase and rebuild the doc from there
-
 
 BUILD_DIR=`pwd`
 
