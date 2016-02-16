@@ -8,7 +8,9 @@
 # A Mac/Hackintosh with OS X
 # Xcode 3 or Higher (Due to docsetutil)
 # Doxygen
+# OS X command line utils
 # GNU Make / binutils
+
 
 # TODO, cleanup command to remove the prebuilt, docset without removing the entire haiku repo.
 
